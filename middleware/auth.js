@@ -25,24 +25,16 @@ const auth = (req, res, next) => {
                         if (users && users.length == 1) {
                             next();
                         } else {
-                            res.status(401).json({
-                                error: 'Unauthorized!',
-                                payload,
-                                users
-                            });
+                            res.status(401).json({ error: 'Unauthorized!' });
                         }
                     })
                     .catch(err => {
-                        res.status(401).json({
-                            error: 'Unauthorized: ' + err
-                        });
+                        res.status(401).json({ error: 'Unauthorized!' });
                     })
             }
 
         } else {
-            res.status(401).json({
-                error: 'Unauthorized!'
-            });
+            res.status(401).json({ error: 'Unauthorized!' });
         }
     });
 }

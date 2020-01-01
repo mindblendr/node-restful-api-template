@@ -39,9 +39,7 @@ router.get('/:person_id', function (req, res) {
             if (person) {
                 res.status(200).json(person);
             } else {
-                res.status(404).json({
-                    message: 'No entry found'
-                });
+                res.status(404).json({ message: 'No entry found' });
             }
         })
         .catch(error => {
