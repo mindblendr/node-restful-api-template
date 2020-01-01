@@ -1,0 +1,13 @@
+{
+    "server": {
+        "host": "localhost",
+        "port": "8081"
+    },
+    "db": {
+        "connection_string": "mongodb://localhost"
+    },
+    "jwt": {
+        "secret": "secret",
+        "algo": "SHA256"
+    }
+}
