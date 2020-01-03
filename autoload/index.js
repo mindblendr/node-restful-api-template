@@ -3,8 +3,8 @@ const list = {
 }
 
 module.exports = {
-    init: () => {
-        Object.keys(list).forEach(key => {
+    init: function() {
+        Object.keys(list).forEach(function (key) {
             require(list[key]);
         });
     }
